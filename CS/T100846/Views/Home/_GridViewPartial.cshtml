@@ -1,0 +1,38 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "GridView";
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+        settings.KeyFieldName = "ModelID";
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowSelectCheckbox = true;
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = false;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+        settings.CustomSummaryCalculate = (s, e) => {
+            ASPxSummaryItem summary = e.Item as ASPxSummaryItem;
+            if (summary.FieldName != "Quantity")
+                return;
+
+            if (e.IsTotalSummary)
+            {
+                int totalValue = 0;
+                foreach (object value in ((MVCxGridView)s).GetSelectedFieldValues("Quantity"))
+                {
+                    totalValue += Convert.ToInt32(value);
+                }
+                e.TotalValue = totalValue;
+                e.TotalValueReady = true;
+            }
+        };
+        settings.Settings.ShowFooter = true;
+        settings.TotalSummary.Add(new ASPxSummaryItem() { SummaryType = DevExpress.Data.SummaryItemType.Custom, FieldName = "Quantity", ShowInColumn = "Quantity" });
+        settings.ClientSideEvents.SelectionChanged = "function(s,e){ GridView.PerformCallback();  }";
+        settings.Columns.Add("ModelID");      
+        settings.Columns.Add("ModelName");
+        settings.Columns.Add("Quantity");
+        settings.Columns.Add("ModelState");       
+    });
+}
+@grid.Bind(Model).GetHtml()
