@@ -1,6 +1,6 @@
 # GridView - How to calculate a summary value for selected rows only
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t103170)**
+**[[Run Online]](https://codecentral.devexpress.com/t103170/)**
 <!-- run online end -->
 
 
