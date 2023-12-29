@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Grid View for ASP.NET MVC - How to calculate summary values only for selected rows
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128549818/)**
-<!-- run online end -->
 
 Thia example demonstrates how to handle the grid's client-side [SelectionChanged](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.SelectionChanged) event to calculate summary values for selected rows.
 
