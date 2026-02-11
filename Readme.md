@@ -18,7 +18,7 @@ Handle the grid's client-side [SelectionChanged](https://docs.devexpress.com/As
 
 * [_GridViewPartial.cstml](/CS/CustomSummary/Views/Home/_GridViewPartial.cshtml)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-mvc-grid-calculate-summary-values-for-selected-rows&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-mvc-grid-calculate-summary-values-for-selected-rows&~~~was_helpful=no)
 
